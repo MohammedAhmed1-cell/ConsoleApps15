@@ -25,7 +25,7 @@ namespace ConsoleAppProject.App01
         /// </summary>
         public void MilesToFeet()
         {
-            OutputHeading();
+            OutputHeading("Miles to feet");
             InputMiles();
             CaluculateFeet();
             OutputFeet();
@@ -33,25 +33,27 @@ namespace ConsoleAppProject.App01
 
         public void FeetToMiles()
         {
-            OutputHeading();
-            InputMiles();
+            OutputHeading("Feet to Miles");
+            InputFeet();
             CalculateMiles();
             OutputMiles();
         }
 
         public void MilesToMetres()
         {
-            OutputHeading();
+            OutputHeading("Miles to Metres");
             InputMiles();
             CalculateMetres();
             OutputMetres();
         }
 
-        public void OutputHeading()
+        
+
+        public void OutputHeading(String header)
         {
             Console.WriteLine();
             Console.WriteLine(" ------------------------------- ");
-            Console.WriteLine("     Convert miles to feet       ");
+            Console.WriteLine("     Convert " + header       );
             Console.WriteLine("     by Mohammed Ahmed           ");
             Console.WriteLine(" ------------------------------- ");
             Console.WriteLine();
