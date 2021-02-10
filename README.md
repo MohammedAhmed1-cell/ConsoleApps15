@@ -5,7 +5,7 @@
 **Student ID**: | 21915819 |
 **Course:** | Software Engineering |
 **Module**: | CO453     |
-**Started**: | September 2019 |    
+**Started**: | Feburary 2019 |    
 
 1. App01: Distance Converter
 2. App02: BMI Calculator
