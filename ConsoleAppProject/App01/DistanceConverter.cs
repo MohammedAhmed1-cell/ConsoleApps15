@@ -3,7 +3,8 @@
 namespace ConsoleAppProject.App01
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// This is a public class for the distance converter with public and
+    /// private variables that will be shown when running the terminal
     /// </summary>
     /// <author>
     /// Mohammed Ahmed version 0.1
@@ -23,7 +24,9 @@ namespace ConsoleAppProject.App01
         private double metres;
 
         /// <summary>
-        /// 
+        /// These public classes are for the conversions for the distance
+        /// converter when you run the program.
+        /// miles to feet
         /// </summary>
         public void MilesToFeet()
         {
@@ -33,6 +36,9 @@ namespace ConsoleAppProject.App01
             OutputFeet();
         }
 
+        /// <summary>
+        /// Feet to Miles
+        /// </summary>
         public void FeetToMiles()
         {
             OutputHeading("Feet to Miles");
@@ -41,6 +47,9 @@ namespace ConsoleAppProject.App01
             OutputMiles();
         }
 
+        /// <summary>
+        /// Miles to Metres
+        /// </summary>
         public void MilesToMetres()
         {
             OutputHeading("Miles to Metres");
@@ -49,6 +58,9 @@ namespace ConsoleAppProject.App01
             OutputMetres();
         }
 
+        /// <summary>
+        /// Feet to Metres
+        /// </summary>
         public void FeetToMetres()
         {
             OutputHeading("Feet to Metres");
@@ -57,7 +69,9 @@ namespace ConsoleAppProject.App01
             OutputFeetToMetres();
         }
 
-
+        /// <summary>
+        /// Metres to Feet
+        /// </summary>
         public void MetresToFeet()
         {
             OutputHeading("Metres to Feet");
@@ -66,6 +80,9 @@ namespace ConsoleAppProject.App01
             OutputMetresToFeet();
         }
 
+        /// <summary>
+        /// Metres to Miles
+        /// </summary>
         public void MetresToMiles()
         {
             OutputHeading("Metres to Miles");
@@ -74,7 +91,11 @@ namespace ConsoleAppProject.App01
             OutputMetresToMiles();
         }
 
-
+        /// <summary>
+        /// This is the output header for when running the program it will
+        /// display this message.
+        /// </summary>
+        /// <param name="header"></param>
         public void OutputHeading(String header)
         {
             Console.WriteLine();
@@ -96,6 +117,9 @@ namespace ConsoleAppProject.App01
             miles = Convert.ToDouble(value);
         }
 
+        /// <summary>
+        /// Tells the user how many metres as a double number
+        /// </summary>
         private void InputMetres()
         {
             Console.Write("Please enter the number of metres > ");
@@ -103,7 +127,9 @@ namespace ConsoleAppProject.App01
             metres = Convert.ToDouble(value);
         }
 
-
+        /// <summary>
+        /// Prompts the user to enter how many feet as a double number
+        /// </summary>
         private void InputFeet()
         {
             Console.Write("Please enter the number of feet > ");
@@ -112,7 +138,8 @@ namespace ConsoleAppProject.App01
         }
 
         /// <summary>
-        /// 
+        /// When you enter the numbers, these private void classes will
+        /// calculate the conversion
         /// </summary>
         private void CaluculateFeet()
         {
@@ -150,7 +177,8 @@ namespace ConsoleAppProject.App01
 
 
         /// <summary>
-        /// 
+        /// When staring the program it will tell you how many for metres, feet
+        /// etc...
         /// </summary>
         private void OutputFeet()
         {
@@ -183,7 +211,13 @@ namespace ConsoleAppProject.App01
         }
 
 
-
+        /// <summary>
+        /// This will give the user specfic numbers to input because it is
+        /// a private class, e.g. input 1 and will give you the conversion or
+        /// else input 2 or 3
+        /// </summary>
+        /// <param name="prompt"></param>
+        /// <returns></returns>
         private int InputUnits(String prompt)
         {
             int unit = 0;
@@ -195,6 +229,10 @@ namespace ConsoleAppProject.App01
             return unit;
         }
 
+        /// <summary>
+        /// This code is to make the text of the program much understandable, e.g.
+        /// it will ask the conversion that you want to enter.
+        /// </summary>
         public void Converter()
         {
             OutputHeading("feet, miles and metres");

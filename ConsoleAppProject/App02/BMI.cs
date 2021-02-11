@@ -2,10 +2,11 @@
 namespace ConsoleAppProject.App02
 {
     /// <summary>
-    /// Please describe the main features of this App
+    /// This a BMI converter for App 02 and i have added a public class for
+    /// the height and weight which are in double numbers
     /// </summary>
     /// <author>
-    /// Student Name version 0.1
+    /// Mohammed Ahmed
     /// </author>
     public class BMI
     {
@@ -13,6 +14,10 @@ namespace ConsoleAppProject.App02
 
         private double weight;
 
+        /// <summary>
+        /// Added a public class for Calc which will give the main parts of the
+        /// BMI and the imperial and metric measurements and the health message
+        /// </summary>
         public void Calc()
         {
             OutputHeader();
@@ -69,8 +74,20 @@ namespace ConsoleAppProject.App02
             else Console.WriteLine("You are obese class 3");
         }
 
-        
-        
+
+        private double CalcImperialBMI()
+        {
+            Console.Write("Please enter your height in inches > ");
+            string value = Console.ReadLine();
+            height = Convert.ToDouble(value);
+
+            Console.Write("Please enter your weight in pounds > ");
+            value = Console.ReadLine();
+            weight = Convert.ToDouble(value);
+
+            double index = weight * 703 / height;
+            return index;
+        }
     }
 
     
