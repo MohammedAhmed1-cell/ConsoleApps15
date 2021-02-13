@@ -23,7 +23,7 @@ namespace ConsoleAppProject
             Console.Beep();
 
             BMI converter = new BMI();
-            converter.Calc();
+            converter.CalculateIndex();
         }
     }
 } 

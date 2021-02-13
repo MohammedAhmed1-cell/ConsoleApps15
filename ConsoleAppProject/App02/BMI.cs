@@ -18,7 +18,7 @@ namespace ConsoleAppProject.App02
         /// Added a public class for Calc which will give the main parts of the
         /// BMI and the imperial and metric measurements and the health message
         /// </summary>
-        public void Calc()
+        public void CalculateIndex()
         {
             OutputHeader();
             double BMIIndex = 0;
@@ -66,12 +66,26 @@ namespace ConsoleAppProject.App02
         {
             Console.Write("Your BMI is > ");
             Console.WriteLine(BMIIndex);
+
             if (BMIIndex < 18.50) Console.WriteLine("You are underweight");
             else if (BMIIndex < 25) Console.WriteLine("You are normal");
             else if (BMIIndex < 30) Console.WriteLine("You are overweight");
             else if (BMIIndex < 35) Console.WriteLine("You are obese class 1");
             else if (BMIIndex < 40) Console.WriteLine("You are obese class 2");
             else Console.WriteLine("You are obese class 3");
+
+            Console.WriteLine("");
+            if (BMIIndex > 23 && BMIIndex < 27.5)
+            {
+                Console.WriteLine("If you are Black, Asian or a member of other ethnic minority groups, ");
+                Console.WriteLine("you have an increased risk of developing chronic conditions such as type 2 diabetes ");
+
+            }else if (BMIIndex >= 27.5)
+            {
+                Console.WriteLine("If you are Black, Asian or a member of other ethnic minority groups, ");
+                Console.WriteLine("you have a high risk of developing chronic conditions such as type 2 diabetes ");
+            }
+               
         }
 
 
@@ -85,9 +99,11 @@ namespace ConsoleAppProject.App02
             value = Console.ReadLine();
             weight = Convert.ToDouble(value);
 
-            double index = weight * 703 / height;
+            double index = weight * 703 / (height * height);
             return index;
         }
+
+
     }
 
     
