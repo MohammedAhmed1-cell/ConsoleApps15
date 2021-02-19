@@ -1,6 +1,7 @@
 ﻿using System;
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App05;
 
 namespace ConsoleAppProject
 {
@@ -22,8 +23,8 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            BMI converter = new BMI();
-            converter.CalculateIndex();
+            RockPaperScisscors game = new RockPaperScisscors();
+            game.Play();
         }
     }
 } 

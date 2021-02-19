@@ -17,11 +17,11 @@ namespace ConsoleAppProject.App01
 
         public const double FEET_In_METRES = 3.28084;
 
-        private double miles;
+        public double miles;
 
-        private double feet;
+        public double feet;
 
-        private double metres;
+        public double metres;
 
         /// <summary>
         /// These public classes are for the conversions for the distance
@@ -32,7 +32,7 @@ namespace ConsoleAppProject.App01
         {
             OutputHeading("Miles to feet");
             InputMiles();
-            CaluculateFeet();
+            CalculateFeet();
             OutputFeet();
         }
 
@@ -141,7 +141,7 @@ namespace ConsoleAppProject.App01
         /// When you enter the numbers, these private void classes will
         /// calculate the conversion
         /// </summary>
-        private void CaluculateFeet()
+        public void CalculateFeet()
         {
             feet = miles * FEET_IN_MILES;
         }
