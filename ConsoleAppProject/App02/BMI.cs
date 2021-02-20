@@ -28,6 +28,9 @@ namespace ConsoleAppProject.App02
             OutputHealthMessage(BMIIndex);
         }
 
+        /// <summary>
+        /// This is my header for when i start my program it will show this message
+        /// </summary>
         public void OutputHeader()
         {
             Console.WriteLine();
@@ -38,6 +41,11 @@ namespace ConsoleAppProject.App02
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// i have made a private class for getunits and when the prgram starts
+        /// it will tell you to enter imperial or metric
+        /// </summary>
+        /// <returns></returns>
         private int GetUnits()
         {
             int unit = 0;
@@ -48,6 +56,12 @@ namespace ConsoleAppProject.App02
             return unit;
         }
 
+        /// <summary>
+        /// this private class is when you enter metric and it will tell you
+        /// to enter your height in metres and your weight in kg, also at the bottom
+        /// it gives the calculation of your BMI.
+        /// </summary>
+        /// <returns></returns>
         private double CalcMetricBMI()
         {
             Console.Write("Please enter your height in metres > ");
@@ -62,6 +76,11 @@ namespace ConsoleAppProject.App02
             return index;
         }
 
+        /// <summary>
+        /// i have added a health message for each weight class and a special
+        /// message for BAME catagories by adding if's and else if's
+        /// </summary>
+        /// <param name="BMIIndex"></param>
         private void OutputHealthMessage(double BMIIndex)
         {
             Console.Write("Your BMI is > ");
@@ -88,7 +107,12 @@ namespace ConsoleAppProject.App02
                
         }
 
-
+        /// <summary>
+        /// this class is for the imperial calculations and is the same for metric,
+        /// but it will tell you to add your weight and height in pounds and inches, thus
+        /// calculating your BMI
+        /// </summary>
+        /// <returns></returns>
         private double CalcImperialBMI()
         {
             Console.Write("Please enter your height in inches > ");

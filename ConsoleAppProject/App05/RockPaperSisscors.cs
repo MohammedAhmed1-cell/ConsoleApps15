@@ -30,7 +30,7 @@ namespace ConsoleAppProject.App05
             RPSRound RPS = new RPSRound();
             for (int i = 0; i < RoundNumber; i++)
             {
-                //PlayerScore = PlayerScore + RPS.Play();
+                PlayerScore = PlayerScore + RPS.Play();
             }
         }
 
