@@ -23,8 +23,8 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-            RockPaperScisscors game = new RockPaperScisscors();
-            game.Play();
+           RockPaperScisscors game = new RockPaperScisscors();
+           game.Play();
         }
     }
 } 

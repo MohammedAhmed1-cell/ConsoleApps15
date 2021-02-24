@@ -6,7 +6,7 @@ namespace ConsoleAppProject.App05
 
         private String PlayerName = "";
         private int RoundNumber = 0;
-        private int PlayerScore = 0;
+        private int[] PlayerScore = new int[] {0, 0, 0};
 
         public void OutputIntroduction()
         {
@@ -30,8 +30,17 @@ namespace ConsoleAppProject.App05
             RPSRound RPS = new RPSRound();
             for (int i = 0; i < RoundNumber; i++)
             {
-                PlayerScore = PlayerScore + RPS.Play();
+                int result = RPS.Play();
+                PlayerScore[result] = PlayerScore[result] + 1;
             }
+
+            Console.WriteLine(PlayerName);
+            Console.WriteLine("You have won " + PlayerScore[0] + " rounds");
+            Console.WriteLine("You have drawn " + PlayerScore[1] + " rounds");
+            Console.WriteLine("You have lost " + PlayerScore[2] + " rounds");
+
+
+
         }
 
     }

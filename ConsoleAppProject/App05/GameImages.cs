@@ -17,29 +17,29 @@ namespace ConsoleAppProject.App05
         /// 
         /// *******************************************************
         /// </summary>
-        public static void DrawScissors(int x, int y)
+        public static void DrawScissors()
         {
-            Console.SetCursorPosition(x, y++);   // set start position then increment y to move down
+               
             Console.Write("     \\            /");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("      \\          /");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("       \\        /");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("        \\      /");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("         \\    /");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("          \\  /");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("           **");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("          /  \\");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("    (----/    \\----)");
-            Console.SetCursorPosition(x, y++);
+            Console.WriteLine();
             Console.Write("     \\  /      \\  /");
-            Console.SetCursorPosition(x, y);
+            Console.WriteLine();
             Console.Write("      ==        ==");
             Console.WriteLine("\n\n");
         }
@@ -49,34 +49,34 @@ namespace ConsoleAppProject.App05
         /// 
         /// *******************************************************
         /// </summary>
-        public static void DrawRock(int x, int y)
+        public static void DrawRock()
         {
-            Console.SetCursorPosition(x, y++);   // set start position then increment y to move down
-            Console.Write("                 ___---___     ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("              .--         --.    ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("           ./   ()       .-. \\.   ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("           /   o    .   (   )  \\  ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("          / .            '-'    \\  ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("         /     ()   ()           \\ ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("        |    o           ()       | ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("        |      .--.           O   | ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("         \\ .  |    |              |  ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("          \\   `.__.'     o   .   /    ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("           `\\  o    ()         /'    ");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("              `--___    ___--'    ");
-            Console.SetCursorPosition(x, y);
-            Console.Write("                     ---         ");
+            
+            Console.WriteLine("                 ___---___     ");
+            
+            Console.WriteLine("              .--         --.    ");
+            
+            Console.WriteLine("           ./   ()       .-. \\.   ");
+            
+            Console.WriteLine("           /   o    .   (   )  \\  ");
+            
+            Console.WriteLine("          / .            '-'    \\  ");
+            
+            Console.WriteLine("         /     ()   ()           \\ ");
+            
+            Console.WriteLine("        |    o           ()       | ");
+            
+            Console.WriteLine("        |      .--.           O   | ");
+            
+            Console.WriteLine("         \\ .  |    |              |  ");
+            
+            Console.WriteLine("          \\   `.__.'     o   .   /    ");
+            
+            Console.WriteLine("           `\\  o    ()         /'    ");
+            
+            Console.WriteLine("              `--___    ___--'    ");
+            
+            Console.WriteLine("                     ---         ");
             Console.WriteLine();
         }
 
@@ -85,34 +85,34 @@ namespace ConsoleAppProject.App05
         /// 
         /// *******************************************************
         /// </summary>
-        public static void DrawPaper(int x, int y)
+        public static void DrawPaper()
         {
-            Console.SetCursorPosition(x, y++);    // set start position then increment y to move down
-            Console.Write("      .--.------------------.");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("     /      \\  \\ \\ \\ \\ \\ \\ \\ \\");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("    /   OOO  \\                |");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("   |   OOOO   || A N D R E X | |");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("   |   OOOO   |                |");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("    \\   OOO   /                /");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("     \\      // / / / / / / / //");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("       `--'-|| | | | | | | | |");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("             \\                \\");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("              \\                \\");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("               \\                \\");
-            Console.SetCursorPosition(x, y++);
-            Console.Write("                \\ \\ \\ \\ \\ \\ \\ \\ \\\\");
-            Console.SetCursorPosition(x, y);
-            Console.Write("                 \\________________\\");
+            
+            Console.WriteLine("      .--.------------------.");
+            
+            Console.WriteLine("     /      \\  \\ \\ \\ \\ \\ \\ \\ \\");
+           
+            Console.WriteLine("    /   OOO  \\                |");
+            
+            Console.WriteLine("   |   OOOO   || A N D R E X | |");
+            
+            Console.WriteLine("   |   OOOO   |                |");
+            
+            Console.WriteLine("    \\   OOO   /                /");
+            
+            Console.WriteLine("     \\      // / / / / / / / //");
+           
+            Console.WriteLine("       `--'-|| | | | | | | | |");
+            
+            Console.WriteLine("             \\                \\");
+            
+            Console.WriteLine("              \\                \\");
+            
+            Console.WriteLine("               \\                \\");
+            
+            Console.WriteLine("                \\ \\ \\ \\ \\ \\ \\ \\ \\\\");
+            
+            Console.WriteLine("                 \\________________\\");
             Console.WriteLine();
         }
 
