@@ -110,7 +110,7 @@ namespace ConsoleAppProject.App01
         ///  Prompt the user to enter the miles
         ///  Input the miles as a double number
         /// </summary>
-        private void InputMiles()
+        public void InputMiles()
         {
             Console.Write("Please enter the number of miles > ");
             string value = Console.ReadLine();
@@ -120,7 +120,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// Tells the user how many metres as a double number
         /// </summary>
-        private void InputMetres()
+        public void InputMetres()
         {
             Console.Write("Please enter the number of metres > ");
             string value = Console.ReadLine();
@@ -130,7 +130,7 @@ namespace ConsoleAppProject.App01
         /// <summary>
         /// Prompts the user to enter how many feet as a double number
         /// </summary>
-        private void InputFeet()
+        public void InputFeet()
         {
             Console.Write("Please enter the number of feet > ");
             string value = Console.ReadLine();
@@ -146,27 +146,27 @@ namespace ConsoleAppProject.App01
             feet = miles * FEET_IN_MILES;
         }
 
-        private void CalculateMiles()
+        public void CalculateMiles()
         {
             miles = feet / FEET_IN_MILES;
         }
 
-        private void CalculateMetres()
+        public void CalculateMetres()
         {
             metres = miles * METRES_IN_MILES;
         }
 
-        private void CalculateFeetToMetres()
+        public void CalculateFeetToMetres()
         {
             metres = feet / FEET_In_METRES;
         }
 
-        private void CalculateMetresToFeet()
+        public void CalculateMetresToFeet()
         {
             feet = metres * FEET_In_METRES;
         }
 
-        private void CalculateMetresToMiles()
+        public void CalculateMetresToMiles()
         {
             miles = metres / METRES_IN_MILES;
         }
