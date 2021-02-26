@@ -1,5 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleAppProject.App01;
+using System;
+
 namespace ConsoleApp.Test
 {
     [TestClass]
@@ -30,39 +32,39 @@ namespace ConsoleApp.Test
         public void TestMilesToMetres()
         {
             DistanceConverter converter = new DistanceConverter();
-            converter.miles = 1608.34;
+            converter.miles = 1.0;
             converter.CalculateMetres();
-            double expectedDistance = 1;
-            Assert.AreEqual(expectedDistance, converter.miles);
+            double expectedDistance = 1608.34;
+            Assert.AreEqual(expectedDistance, converter.metres);
         }
 
         [TestMethod]
         public void TestFeetToMetres()
         {
             DistanceConverter converter = new DistanceConverter();
-            converter.feet = 1;
+            converter.feet = 3.2;       
             converter.CalculateFeetToMetres();
-            double expectedDistance = 3.28084;
-            Assert.AreEqual(expectedDistance, converter.miles);
+            double expectedDistance = 1;
+            Assert.AreEqual(expectedDistance, Math.Round(converter.metres, 1));
         }
 
         [TestMethod]
         public void TestMetresToFeet()
         {
             DistanceConverter converter = new DistanceConverter();
-            converter.feet = 3.28084;
+            converter.metres = 1.0;
             converter.CalculateMetresToFeet();
-            double expectedDistance = 1;
-            Assert.AreEqual(expectedDistance, converter.miles);
+            double expectedDistance = 3.28084;
+            Assert.AreEqual(expectedDistance, converter.feet);
         }
 
         [TestMethod]
         public void TestMetresToMiles()
         {
             DistanceConverter converter = new DistanceConverter();
-            converter.feet = 1;
+            converter.metres = 1608.34;
             converter.CalculateMetresToMiles();
-            double expectedDistance = 1608.34;
+            double expectedDistance = 1.0;
             Assert.AreEqual(expectedDistance, converter.miles);
         }
 
