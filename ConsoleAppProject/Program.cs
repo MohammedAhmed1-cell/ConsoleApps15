@@ -1,6 +1,7 @@
 ﻿using System;
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
+using ConsoleAppProject.App03;
 using ConsoleAppProject.App05;
 
 namespace ConsoleAppProject
@@ -23,8 +24,40 @@ namespace ConsoleAppProject
             Console.WriteLine();
             Console.Beep();
 
-           DistanceConverter game = new DistanceConverter();
-           game.Converter();
+           StudentGrades game = new StudentGrades();
+           game.MakeStudentTable();
+           for (int i = 0; i < 10; i++)
+           {
+               game.Grades();
+           }
+
+           game.PrintStudents();
+           int[] stats = game.CalculateStats("Biology Mark");
+           Console.WriteLine("Minimum Biology Mark: " + stats[0]);
+           Console.WriteLine("Maximum Biology Mark: " + stats[1]);
+           Console.WriteLine("Mean Biology Mark: " + stats[2]);
+
+           stats = game.CalculateStats("Chemistry Mark");
+           Console.WriteLine("Minimum Chemistry Mark: " + stats[0]);
+           Console.WriteLine("Maximum Chemistry Mark: " + stats[1]);
+           Console.WriteLine("Mean Chemistry Mark: " + stats[2]);
+
+           stats = game.CalculateStats("Physics Mark");
+           Console.WriteLine("Minimum Physics Mark: " + stats[0]);
+           Console.WriteLine("Maximum Physics Mark: " + stats[1]);
+           Console.WriteLine("Mean Physics Mark: " + stats[2]);
+
+           double[] GradePercentages = game.CalculateGradePercentage();
+           Console.WriteLine("Percentage for First Class: " + GradePercentages[0]);
+           Console.WriteLine("Percentage for Upper Second Class: " + GradePercentages[1]);
+           Console.WriteLine("Percentage for Lower Second Class: " + GradePercentages[2]);
+           Console.WriteLine("Percentage for Third Class: " + GradePercentages[3]);
+           Console.WriteLine("Percentage for Fail: " + GradePercentages[4]);
+
+
+
+
+
         }
     }
 } 

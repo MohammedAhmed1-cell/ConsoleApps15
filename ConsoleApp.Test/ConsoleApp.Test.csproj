@@ -16,4 +16,7 @@
   <ItemGroup>
     <ProjectReference Include="..\ConsoleAppProject\ConsoleAppProject.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig" />
+  </ItemGroup>
 </Project>
