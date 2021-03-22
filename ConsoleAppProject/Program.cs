@@ -1,7 +1,9 @@
 ﻿using System;
+using ConsoleAppProject.Helpers;
 using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
+using ConsoleAppProject.App04;
 using ConsoleAppProject.App05;
 
 namespace ConsoleAppProject
@@ -16,7 +18,9 @@ namespace ConsoleAppProject
     /// </summary>
     public static class Program
     {
-        public static void Main(string[] args)
+        private static NetworkApp app04 = new NetworkApp();
+
+        public static void App03Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Black;
             
@@ -54,10 +58,20 @@ namespace ConsoleAppProject
            Console.WriteLine("Percentage for Third Class: " + GradePercentages[3]);
            Console.WriteLine("Percentage for Fail: " + GradePercentages[4]);
 
+        }
 
+        public static void Main(string[] args)
+        {
+            
+
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            NetworkApp game = new NetworkApp();
+            game.DisplayMenu();
 
 
 
         }
+
     }
 } 

@@ -1,6 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ConsoleAppProject.App01;
+using ConsoleAppProject.App03;
 using System;
+using System.Data;
 
 namespace ConsoleApp.Test
 {
@@ -66,6 +68,23 @@ namespace ConsoleApp.Test
             converter.CalculateMetresToMiles();
             double expectedDistance = 1.0;
             Assert.AreEqual(expectedDistance, converter.miles);
+        }
+
+        [TestMethod]
+        public void TestMean()
+        {
+            StudentGrades grades = new StudentGrades();
+          
+            grades.MakeStudentTable();
+
+            DataRow row = grades.students.NewRow();
+            row["id"] = 1;
+            row["Name"] = "Mohammed";
+            row["Biology Mark"] = 67;
+            row["Physics Mark"] = 78;
+            row["Chemistry Mark"] = 70;
+            row["Grade"] = "First Class";
+            grades.students.Rows.Add(row);
         }
 
 

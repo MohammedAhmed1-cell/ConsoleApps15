@@ -10,9 +10,9 @@ namespace ConsoleAppProject.App03
     /// I have created a class called student grades and i have comprised each part of the
     /// data table and their grade count
     /// </summary>
-    class StudentGrades
+    public class StudentGrades
     {
-        DataTable students = new DataTable("Students");
+        public DataTable students = new DataTable("Students");
 
         int[] GradeCount = new int[] { 0, 0, 0, 0, 0 };
 
@@ -150,20 +150,20 @@ namespace ConsoleAppProject.App03
                 GradeCount[0] = GradeCount[0] + 1;
             }
             else
-                if (percentage < 70 && percentage >= 60)
+               if (percentage < 70 && percentage >= 60)
             {
                 division = "Upper Second Class";
                 GradeCount[1] = GradeCount[1] + 1;
             }
             else
-                if (percentage < 60 && percentage >= 50)
+               if (percentage < 60 && percentage >= 50)
             {
                 division = "Lower Second Class";
                 GradeCount[2] = GradeCount[2] + 1;
             }
 
             else
-                if  (percentage < 49 && percentage >= 40)
+               if (percentage < 49 && percentage >= 40)
             {
                 division = "Third Class";
                 GradeCount[3] = GradeCount[3] + 1;
