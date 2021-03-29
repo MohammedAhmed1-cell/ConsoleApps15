@@ -15,7 +15,7 @@ namespace ConsoleAppProject.App04
     /// search or ordering functions.
     ///</summary>
     ///<author>
-    ///  Michael Kölling and David J. Barnes
+    ///  Mohammed Ahmed
     ///  version 0.1
     ///</author> 
     public class NewsFeed
@@ -31,16 +31,16 @@ namespace ConsoleAppProject.App04
         
 
         ///<summary>
-        /// Construct an empty news feed.
+        /// These are said posts that i have intitially created, one message and one photo post
         ///</summary>
         public NewsFeed()
         {
             posts = new List<Post>();
 
-            MessagePost post = new MessagePost(AUTHOR, "I love Visual Studio 2019");
+            MessagePost post = new MessagePost(AUTHOR, "I love Visual Studio 2019", 1);
             AddMessagePost(post);
 
-            PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Visual Studio 2019");
+            PhotoPost photoPost = new PhotoPost(AUTHOR, "Photo1.jpg", "Visual Studio 2019", 2);
             AddPhotoPost(photoPost);
         }
 
@@ -63,6 +63,33 @@ namespace ConsoleAppProject.App04
         public void AddPhotoPost(PhotoPost photo)
         {
             posts.Add(photo);
+        }
+
+        /// <summary>
+        /// method to remove a post
+        /// </summary>
+        /// <param name="id"></param>
+        public void RemovePost(int id)
+        {
+            Post post = FindPost(id);
+            posts.Remove(post);
+        }
+
+        /// <summary>
+        /// method to find a post by insertting said number e.g. 1
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public Post FindPost(int id)
+        {
+            foreach(MessagePost post in posts)
+            {
+                if(id == post.PostId)
+                {
+                    return post;
+                }
+            }
+            return null;
         }
 
         ///<summary>

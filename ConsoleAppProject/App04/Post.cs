@@ -3,11 +3,16 @@ using System;
 
 namespace ConsoleAppProject.App04
 {
+    /// <summary>
+    /// This is my post class which i have created methods for likes, comments and the id's of posts 
+    /// </summary>
     public class Post
     {
         private int likes;
 
         private readonly List<String> comments;
+
+        public int PostId;
 
 
         // username of the post's author
@@ -15,13 +20,16 @@ namespace ConsoleAppProject.App04
 
         public DateTime Timestamp { get; }
 
-        public Post(string author)
+        // for getting the posts author and id
+        public Post(string author, int id)
         {
             this.Username = author;
             Timestamp = DateTime.Now;
 
             likes = 0;
             comments = new List<String>();
+
+            PostId = id;
         }
 
         /// <summary>
@@ -67,14 +75,10 @@ namespace ConsoleAppProject.App04
             Console.WriteLine($"    Time Elpased: {FormatElapsedTime(Timestamp)}");
             Console.WriteLine();
 
-            if (likes > 0)
-            {
-                Console.WriteLine($"    Likes:  {likes}  people like this.");
-            }
-            else
-            {
-                Console.WriteLine();
-            }
+            
+            
+            Console.WriteLine($"    Likes:  {likes}  people like this.");
+           
 
             if (comments.Count == 0)
             {
@@ -82,7 +86,11 @@ namespace ConsoleAppProject.App04
             }
             else
             {
-                Console.WriteLine($"    {comments.Count}  comment(s). Click here to view.");
+                Console.WriteLine($"    {comments.Count}  comment(s).");
+                foreach(string c in comments)
+                {
+                    Console.WriteLine(c);
+                }
             }
         }
 

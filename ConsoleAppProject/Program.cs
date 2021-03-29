@@ -4,7 +4,6 @@ using ConsoleAppProject.App01;
 using ConsoleAppProject.App02;
 using ConsoleAppProject.App03;
 using ConsoleAppProject.App04;
-using ConsoleAppProject.App05;
 
 namespace ConsoleAppProject
 {
@@ -22,7 +21,7 @@ namespace ConsoleAppProject
 
         public static void App03Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.Black;
+            
             
             Console.WriteLine("BNU CO453 Applications Programming 2020-2021!");
             Console.WriteLine();
@@ -64,8 +63,9 @@ namespace ConsoleAppProject
         {
             
 
-            Console.ForegroundColor = ConsoleColor.Black;
-
+            
+            Console.BackgroundColor = ConsoleColor.Black;
+            Console.Clear();
             NetworkApp game = new NetworkApp();
             game.DisplayMenu();
 

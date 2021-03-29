@@ -7,5 +7,6 @@
 
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="App5\" />
   </ItemGroup>
 </Project>

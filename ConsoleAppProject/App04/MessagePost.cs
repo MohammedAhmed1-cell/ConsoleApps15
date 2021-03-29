@@ -17,8 +17,6 @@ namespace ConsoleAppProject.App04
         // an arbitrarily long, multi-line message
         public String Message { get; }
 
-        
-
         /// <summary>
         /// Constructor for objects of class MessagePost.
         /// </summary>
@@ -28,11 +26,14 @@ namespace ConsoleAppProject.App04
         /// <param name="text">
         /// The text of this post.
         /// </param>
-        public MessagePost(String author, String text): base(author)
+        public MessagePost(String author, String text, int id): base(author, id)
         {
             Message = text;
         }
 
+        /// <summary>
+        /// This will overide the terminal into displaying all the messages that i have inputted
+        /// </summary>
         public override void Display()
         {
             Console.WriteLine("   Message:" + Message);

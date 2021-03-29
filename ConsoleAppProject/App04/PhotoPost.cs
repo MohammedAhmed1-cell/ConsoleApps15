@@ -8,7 +8,7 @@ namespace ConsoleAppProject.App04
     /// Other data, such as author and time, are also stored.
     ///</summary>
     /// <author>
-    /// Michael Kölling and David J. Barnes
+    /// Mohammed Ahmed
     /// @version 0.1
     /// </author>
     public class PhotoPost : Post
@@ -32,12 +32,15 @@ namespace ConsoleAppProject.App04
         /// <param name="filename">
         /// The filename of the image in this post.
         /// </param>
-        public PhotoPost(String author, String filename, String caption):base(author)
+        public PhotoPost(String author, String filename, String caption, int id):base(author, id)
         {
             this.Filename = filename;
             this.Caption = caption;
         }
 
+        /// <summary>
+        /// This is to overide the display of the filename and caption
+        /// </summary>
         public override void Display()
         {
             Console.WriteLine($"   Filename: [{Filename}]");
